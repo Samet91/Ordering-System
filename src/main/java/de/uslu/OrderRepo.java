@@ -1,5 +1,6 @@
 package de.uslu;
 
+import java.util.Collection;
 import java.util.HashMap;
 
 public class OrderRepo {
@@ -10,16 +11,16 @@ public class OrderRepo {
         orders = new HashMap<>();
     }
 
-    public void list(){
-
+    public Collection<Order> list(){
+        return orders.values();
     }
 
-    public void get(){
-
+    public Order get(String id){
+        return orders.get(id);
     }
 
-    public void add(){
-
+    public void add(Order newOrder){
+        orders.put(newOrder.getId(), newOrder);
     }
 
 
