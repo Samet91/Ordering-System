@@ -5,8 +5,9 @@ public class Product {
     private String id;
     private String name;
 
-    public Product(String name) {
+    public Product(String name, String id) {
         this.name = name;
+        this.id = id;
     }
 
     public String getId() {
