@@ -7,8 +7,8 @@ public class ProductRepo {
 
     private HashMap<String,Product> products;
 
-    public ProductRepo() {
-        products = new HashMap<>();
+    public ProductRepo(HashMap<String, Product> products) {
+       this.products = products;
     }
 
     public Collection<Product> list(){
