@@ -1,7 +1,26 @@
 package de.uslu;
 
+import java.util.HashMap;
+
 public class OrderRepo {
 
-    private OrderRepo orders;
+    private HashMap<String,Order> orders;
+
+    public OrderRepo(){
+        orders = new HashMap<>();
+    }
+
+    public void list(){
+
+    }
+
+    public void get(){
+
+    }
+
+    public void add(){
+
+    }
+
 
 }
