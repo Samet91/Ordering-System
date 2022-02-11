@@ -1,5 +1,7 @@
 package de.uslu;
 
+import java.util.Collection;
+
 public class ShopService {
 
     private OrderRepo myOrders;
@@ -10,28 +12,28 @@ public class ShopService {
         this.myProducts = myProducts;
     }
 
-    public void getProduct() {
-
+    public Product getProduct(String id) {
+        return myProducts.get(id);
     }
 
-    public void addProduct() {
-
+    public void addProduct(Product newProduct) {
+        myProducts.add(newProduct);
     }
 
-    public void listProducts() {
-
+    public Collection<Product> listProducts() {
+        return myProducts.list();
     }
 
-    public void addOrder() {
-
+    public void addOrder(Order newOrder) {
+        myOrders.add(newOrder);
     }
 
-    public void getOrder() {
-
+    public Order getOrder(String id) {
+        return myOrders.get(id);
     }
 
-    public void listOrders() {
-
+    public Collection<Order> listOrders() {
+        return myOrders.list();
     }
 
 }
