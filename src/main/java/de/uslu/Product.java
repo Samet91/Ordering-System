@@ -2,8 +2,8 @@ package de.uslu;
 
 public class Product {
 
-    private String id;
-    private String name;
+    private final String id;
+    private final String name;
 
     public Product(String name, String id) {
         this.name = name;

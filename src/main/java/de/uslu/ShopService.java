@@ -1,6 +1,7 @@
 package de.uslu;
 
 import java.util.Collection;
+import java.util.Optional;
 
 public class ShopService {
 
@@ -12,8 +13,8 @@ public class ShopService {
         this.myProducts = myProducts;
     }
 
-    public Product getProduct(String id) {
-        return myProducts.get(id);
+    public Optional<Product> getProduct(String id) {
+        return Optional.ofNullable(myProducts.get(id));
     }
 
     public void addProduct(Product newProduct) {
@@ -28,8 +29,8 @@ public class ShopService {
         myOrders.add(newOrder);
     }
 
-    public Order getOrder(String id) {
-        return myOrders.get(id);
+    public Optional<Order> getOrder(String id) {
+        return Optional.ofNullable(myOrders.get(id));
     }
 
     public Collection<Order> listOrders() {
