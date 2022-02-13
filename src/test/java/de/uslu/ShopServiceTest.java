@@ -19,7 +19,9 @@ class ShopServiceTest {
 
         ShopService newShopService = new ShopService(orders, productsRepo);
         newShopService.addProduct(product);
-        var result = newShopService.getProduct("1");
+        var result = newShopService.getProduct(String.valueOf(1));
         assertEquals(product, result);
     }
+
+
 }
